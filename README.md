@@ -11,8 +11,6 @@ infrastructure: Contiene los adaptadores para interactuar con servicios externos
 domain: Define las entidades y objetos de valor del dominio.
 A continuación, se presenta un diagrama de la arquitectura propuesta:
 
-lua
-Copy code
   +---------------------+
   |      Application    |
   |       (Use Cases)   |
@@ -32,25 +30,21 @@ Copy code
             v
      External Services
   (postcodes.io API, Database)
+
+
 Pasos para Hacer Funcionar el Proyecto
 Clona el repositorio desde GitHub:
-bash
-Copy code
-git clone https://github.com/tu-usuario/proyecto-coordenadas-postales.git
+git clone https://github.com/Sard0z/Data_challenge.git
+
 Instala las dependencias del proyecto:
-bash
-Copy code
-cd proyecto-coordenadas-postales
+cd DATA_CHALLENGE
 pip install -r requirements.txt
 Configura las variables de entorno necesarias, como la URL del API de postcodes.io.
 
 Levanta los microservicios utilizando Docker Compose:
-
-bash
-Copy code
+docker compose up
 docker-compose up --build
 Accede a la interfaz del microservicio de carga de archivos de coordenadas en tu navegador web:
-bash
-Copy code
+python manage.py runserver
 http://localhost:8000/upload-coordinates/
 Sube el archivo de coordenadas y verifica que se procese correctamente.
