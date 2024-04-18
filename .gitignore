@@ -1,0 +1,4 @@
+data_challenge/lib
+data_challenge/Scripts
+data_challenge/pyvenv.cfg
+db.sqlite3
